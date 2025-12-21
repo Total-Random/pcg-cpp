@@ -1,0 +1,17 @@
+set(SAMPLE_TARGETS pcg-demo codebook cppref-sample make-partytrick)
+
+foreach(sample ${SAMPLE_TARGETS})
+    add_executable(${sample} ${sample}.cpp)
+    target_link_libraries(${sample} PRIVATE pcg_cpp::pcg_cpp)
+endforeach()
+
+# spew and use-partytrick use POSIX-specific <unistd.h> and write()
+if(NOT MSVC)
+    set(POSIX_SAMPLES spew use-partytrick)
+    foreach(sample ${POSIX_SAMPLES})
+        if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${sample}.cpp")
+            add_executable(${sample} ${sample}.cpp)
+            target_link_libraries(${sample} PRIVATE pcg_cpp::pcg_cpp)
+        endif()
+    endforeach()
+endif()
