@@ -19,39 +19,26 @@
 # For additional information about the PCG random number generation scheme,
 # visit http://www.pcg-random.org/.
 #
-# Determine where the executables are
-# Priority: Current Dir -> ../build/test-high/Debug -> ../build/test-high/Release -> ../build/test-high
+# Determine where the executables are (standard Makefile behavior)
 BASEDIR=$(dirname "$0")
 cd "$BASEDIR"
 
 BINDIR="."
-if [ ! -f "./check-pcg32" ] && [ ! -f "./check-pcg32.exe" ]; then
-    if [ -f "../build/test-high/Debug/check-pcg32.exe" ]; then
-        BINDIR="../build/test-high/Debug"
-    elif [ -f "../build/test-high/Release/check-pcg32.exe" ]; then
-        BINDIR="../build/test-high/Release"
-    elif [ -f "../build/test-high/check-pcg32.exe" ]; then
-        BINDIR="../build/test-high"
-    elif [ -f "../build/test-high/check-pcg32" ]; then
-        BINDIR="../build/test-high"
-    fi
-fi
 
 # Function to run a test, handling potential .exe extension
 run_test() {
     TEST_NAME=$1
-    if [ -f "$BINDIR/$TEST_NAME.exe" ]; then
-        "$BINDIR/$TEST_NAME.exe"
-    elif [ -f "$BINDIR/$TEST_NAME" ]; then
-        "$BINDIR/$TEST_NAME"
+    if [ -f "./$TEST_NAME.exe" ]; then
+        "./$TEST_NAME.exe"
+    elif [ -f "./$TEST_NAME" ]; then
+        "./$TEST_NAME"
     else
-        echo "ERROR: $TEST_NAME not found in $BINDIR" >&2
+        echo "ERROR: $TEST_NAME not found in $PWD" >&2
         return 1
     fi
 }
 
 echo Performing a quick sanity check...
-echo "Testing using binaries from: $BINDIR"
 
 mkdir -p actual
 rm -f actual/*
