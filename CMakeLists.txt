@@ -15,11 +15,7 @@ target_include_directories(pcg-cpp INTERFACE
 
 target_compile_features(pcg-cpp INTERFACE cxx_std_11)
 
-if(MSVC)
-    target_compile_options(pcg-cpp INTERFACE /W4 /FS) # /FS fixes C1090 PDB race conditions
-else()
-    target_compile_options(pcg-cpp INTERFACE -Wall -Wextra -Wpedantic)
-endif()
+
 
 # Options
 option(PCG_CPP_BUILD_SAMPLES "Build samples" ON)
