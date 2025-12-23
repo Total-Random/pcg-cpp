@@ -29,13 +29,18 @@ This modernized fork of `pcg-cpp` by **Total-Random** integrates several critica
 - **Author:** [Demonese](https://github.com/Demonese)
 - **Description:** Added native support for ARM64 on MSVC using `__umulh` for efficient 128-bit multiplication.
 
+### 6. Sample and Include Cleanups
+- **Origin:** [imneme/pcg-cpp commit be22608](https://github.com/imneme/pcg-cpp/commit/be22608ebcbe3aa0606600975705e2820600ed4e)
+- **Author:** [brt-v](https://github.com/brt-v)
+- **Description:** Simplified header includes in sample programs and added `basic_usage.cpp` sample.
+
 ## Total-Random Improvements
 
-### 6. Modern CMake Build System
+### 7. Modern CMake Build System
 - **Author:** [Total-Random](https://github.com/Total-Random)
 - **Description:** Comprehensive CMake integration with `find_package` support and automated testing via `ctest`.
 
-### 7. MSVC Compatibility Fixes
+### 8. MSVC Compatibility Fixes
 - **Author:** [Total-Random](https://github.com/Total-Random)
 - **Description:** Resolved several MSVC-specific issues:
   - `C2678` (ambiguous operator) in `set_stream` and `operator>>`.

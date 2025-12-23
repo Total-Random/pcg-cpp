@@ -29,9 +29,6 @@
  *      ./spew | hexdump -C | less
  */
 
-#include <cstdio>
-#include <cstddef>
-#include <cstdint>
 #include <iostream>
 #include <random>
 

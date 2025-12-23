@@ -28,12 +28,8 @@
  *      ./use-partytrick | hexdump -C | less
  */
 
-#include <cstdio>
-#include <cstddef>
-#include <cstdint>
 #include <iostream>
 #include <sstream>
-#include <string>
 #include <random>
 
 #include <unistd.h>

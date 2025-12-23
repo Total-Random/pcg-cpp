@@ -24,14 +24,8 @@
  * It shows some basic generation tasks.
  */
 
-#include <cstddef>
-#include <cstdint>
-#include <cstdlib>
-#include <cassert>
-#include <climits>
 #include <iostream>
 #include <iomanip>
-#include <algorithm>
 #include <numeric>
 #include <random>       // for random_device
 
