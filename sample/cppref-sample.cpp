@@ -63,7 +63,7 @@ int main()
  
     std::map<int, int> hist;
     for (int n = 0; n < 10000; ++n) {
-        ++hist[int(std::round(normal_dist(rng)))];
+        ++hist[std::lround(normal_dist(rng))];
     }
     std::cout << "Normal distribution around " << mean << ":\n";
     for (auto p : hist) {
