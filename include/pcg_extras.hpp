@@ -579,7 +579,7 @@ private:
     RngType rng_;
 
 public:
-    // This fix is from imneme/pcg-cpp commit 1eeda5f
+    // This fix is from imneme/pcg-cpp PR #83
     typedef uint_least32_t result_type;
 
     template<typename... Args>

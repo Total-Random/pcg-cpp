@@ -15,8 +15,8 @@ This modernized fork of `pcg-cpp` by **Total-Random** integrates several critica
 - **Description:** Enables `__declspec(empty_bases)` on MSVC to optimize the memory footprint of RNG objects.
 
 ### 3. Public `result_type` in `seed_seq_from`
-- **Origin:** [imneme/pcg-cpp commit 1eeda5f](https://github.com/imneme/pcg-cpp/commit/1eeda5f893d9595a855cdfa5d53dbbdd08c091b7)
-- **Author:** [oneill](https://github.com/imneme) (Melissa O'Neill)
+- **Origin:** [imneme/pcg-cpp PR #83](https://github.com/imneme/pcg-cpp/pull/83)
+- **Author:** [timo-eichhorn](https://github.com/timo-eichhorn)
 - **Description:** Makes `result_type` public to comply with the C++ `SeedSequence` concept.
 
 ### 4. GCC Warning Fixes
