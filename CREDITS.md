@@ -49,4 +49,9 @@ This modernized fork of `pcg-cpp` by **Total-Random** integrates several critica
   - `C4127` (conditional expression is constant) in template code.
 
 ## Special Thanks
-Special thanks to **Melissa O'Neill** for creating the original PCG library and to all the community members who have proposed fixes over the years, including **david-fong** for valuable build system feedback.
+## Special Thanks
+Special thanks to **Melissa O'Neill** for creating the original PCG library and to all the community members who have proposed fixes over the years.
+
+We are especially grateful to:
+- **Ben Haller** ([bhaller](https://github.com/bhaller)) for his early support, encouragement, and understanding during the initial phases of this fork.
+- **david-fong** ([david-fong](https://github.com/david-fong)) for valuable feedback on the CMake build system.
