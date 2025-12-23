@@ -26,6 +26,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <climits>
 #include <numeric>
 #include <random>       // for random_device
 
