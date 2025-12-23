@@ -22,10 +22,6 @@ jobs:
             compiler: clang
             cc: clang
             cxx: clang++
-          - os: ubuntu-latest
-            compiler: intel-icx
-            cc: icx
-            cxx: icpx
           - os: windows-latest
             compiler: msvc
           - os: macos-latest
@@ -34,22 +30,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Install Intel oneAPI (Linux)
-      if: matrix.compiler == 'intel-icx' && runner.os == 'Linux'
-      run: |
-        wget https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
-        sudo apt-key add GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
-        echo "deb https://apt.repos.intel.com/oneapi all main" | sudo tee /etc/apt/sources.list.d/oneAPI.list
-        sudo apt-get update
-        sudo apt-get install -y intel-oneapi-compiler-dpcpp-cpp-and-cpp-classic
-        
-    - name: Setup Intel oneAPI environment
-      if: matrix.compiler == 'intel-icx' && runner.os == 'Linux'
-      run: |
-        source /opt/intel/oneapi/setvars.sh
-        echo "CC=icx" >> $GITHUB_ENV
-        echo "CXX=icpx" >> $GITHUB_ENV
-        echo "/opt/intel/oneapi/compiler/latest/bin" >> $GITHUB_PATH
+
 
     - name: Configure CMake
       run: >
@@ -58,8 +39,8 @@ jobs:
         -DPCG_CPP_BUILD_TESTS=ON
         -DCMAKE_BUILD_TYPE=Release
       env:
-        CC: ${{ matrix.cc || env.CC }}
-        CXX: ${{ matrix.cxx || env.CXX }}
+        CC: ${{ matrix.cc }}
+        CXX: ${{ matrix.cxx }}
 
     - name: Build
       run: cmake --build build --config Release
@@ -82,3 +63,23 @@ jobs:
       shell: pwsh
       run: |
         ./test-high/run-tests.ps1
+
+  freebsd:
+    runs-on: ubuntu-latest
+    name: FreeBSD
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Test on FreeBSD
+      uses: vmactions/freebsd-vm@v1
+      with:
+        usesh: true
+        prepare: pkg install -y cmake
+        run: |
+          cmake -B build -DPCG_CPP_BUILD_SAMPLES=ON -DPCG_CPP_BUILD_TESTS=ON -DCMAKE_BUILD_TYPE=Release
+          cmake --build build --config Release
+          cd build
+          ctest -C Release --output-on-failure
+          cd ..
+          chmod +x ./test-high/run-tests.sh
+          ./test-high/run-tests.sh
