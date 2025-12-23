@@ -42,9 +42,14 @@ jobs:
         echo "deb https://apt.repos.intel.com/oneapi all main" | sudo tee /etc/apt/sources.list.d/oneAPI.list
         sudo apt-get update
         sudo apt-get install -y intel-oneapi-compiler-dpcpp-cpp-and-cpp-classic
+        
+    - name: Setup Intel oneAPI environment
+      if: matrix.compiler == 'intel-icx' && runner.os == 'Linux'
+      run: |
         source /opt/intel/oneapi/setvars.sh
         echo "CC=icx" >> $GITHUB_ENV
         echo "CXX=icpx" >> $GITHUB_ENV
+        echo "/opt/intel/oneapi/compiler/latest/bin" >> $GITHUB_PATH
 
     - name: Configure CMake
       run: >
@@ -53,8 +58,8 @@ jobs:
         -DPCG_CPP_BUILD_TESTS=ON
         -DCMAKE_BUILD_TYPE=Release
       env:
-        CC: ${{ matrix.cc }}
-        CXX: ${{ matrix.cxx }}
+        CC: ${{ matrix.cc || env.CC }}
+        CXX: ${{ matrix.cxx || env.CXX }}
 
     - name: Build
       run: cmake --build build --config Release
