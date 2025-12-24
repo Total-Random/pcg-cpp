@@ -33,14 +33,22 @@ This modernized fork of `pcg-cpp` by **Total-Random** integrates several critica
 - **Origin:** [imneme/pcg-cpp commit be22608](https://github.com/imneme/pcg-cpp/commit/be22608ebcbe3aa0606600975705e2820600ed4e)
 - **Author:** [brt-v](https://github.com/brt-v)
 - **Description:** Simplified header includes in sample programs and added `basic_usage.cpp` sample.
+### 7. Consistent Integer Type
+- **Origin:** [imneme/pcg-cpp PR #92](https://github.com/imneme/pcg-cpp/pull/92)
+- **Author:** [rstub](https://github.com/rstub)
+- **Description:** Fixes compilation issues where `__uint128` isn't available by ensuring consistent type usage.
+
+### 8. Modern C++ Standard Usage in Samples
+- **Suggestion:** [david-fong](https://github.com/david-fong)
+- **Description:** Replaced C-style casting and `std::round` with `std::lround` in `cppref-sample.cpp`.
 
 ## Total-Random Improvements
 
-### 7. Modern CMake Build System
+### 9. Modern CMake Build System
 - **Author:** [Total-Random](https://github.com/Total-Random)
 - **Description:** Comprehensive CMake integration with `find_package` support and automated testing via `ctest`.
 
-### 8. MSVC Compatibility Fixes
+### 10. MSVC Compatibility Fixes
 - **Author:** [Total-Random](https://github.com/Total-Random)
 - **Description:** Resolved several MSVC-specific issues:
   - `C2678` (ambiguous operator) in `set_stream` and `operator>>`.
