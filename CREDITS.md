@@ -42,13 +42,18 @@ This modernized fork of `pcg-cpp` by **Total-Random** integrates several critica
 - **Suggestion:** [david-fong](https://github.com/david-fong)
 - **Description:** Replaced C-style casting and `std::round` with `std::lround` in `cppref-sample.cpp`.
 
+### 9. Rotation Inference Fix
+- **Origin:** [imneme/pcg-cpp PR #87](https://github.com/imneme/pcg-cpp/pull/87)
+- **Author:** [rnvannatta](https://github.com/rnvannatta)
+- **Description:** Fixed rotation functions to rely on compiler idiom recognition instead of undefined behavior for 0-shift.
+
 ## Total-Random Improvements
 
-### 9. Modern CMake Build System
+### 10. Modern CMake Build System
 - **Author:** [Total-Random](https://github.com/Total-Random)
 - **Description:** Comprehensive CMake integration with `find_package` support and automated testing via `ctest`.
 
-### 10. MSVC Compatibility Fixes
+### 11. MSVC Compatibility Fixes
 - **Author:** [Total-Random](https://github.com/Total-Random)
 - **Description:** Resolved several MSVC-specific issues:
   - `C2678` (ambiguous operator) in `set_stream` and `operator>>`.
