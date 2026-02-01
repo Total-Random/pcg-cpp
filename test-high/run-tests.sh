@@ -31,6 +31,8 @@ if [ ! -f "./check-pcg32" ] && [ ! -f "./check-pcg32.exe" ]; then
     # Try CMake build directories
     if [ -f "../build/test-high/check-pcg32" ]; then
         BINDIR="../build/test-high"
+    elif [ -f "../build-arm64/test-high/check-pcg32" ]; then
+        BINDIR="../build-arm64/test-high"
     elif [ -f "../build/test-high/Release/check-pcg32.exe" ]; then
         BINDIR="../build/test-high/Release"
     elif [ -f "../build/test-high/Debug/check-pcg32.exe" ]; then
