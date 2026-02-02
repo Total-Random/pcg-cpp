@@ -7,19 +7,26 @@
 
 [PCG-Random website]: http://www.pcg-random.org
 
-This is the **maintained** version of the PCG C++ library, hosted by the **Total-Random** organization. We have taken over maintenance to ensure this statistically excellent family of random number generators continues to work seamlessly on modern systems and compilers.
+_This is the **maintained** version of the PCG C++ library, hosted by the **Total-Random** organization. We have taken over maintenance to ensure this statistically excellent family of random number generators continues to work seamlessly on modern systems and compilers._
 
 ## Why this fork?
 
 The original repository by Melissa O'Neill (`imneme/pcg-cpp`) has been a cornerstone of the C++ ecosystem but hasn't seen updates in several years. **Total-Random** exists to keep such vital legacy libraries alive by integrating community fixes, supporting new architectures, and fixing build breakages on modern IDEs.
 
 ### Key Improvements and Integrated Fixes:
+
 - **Windows ARM64 Support**: Integrated native support for MSVC on ARM64 architectures (Surface Pro, Apple Silicon via VM, etc.) using `__umulh` intrinsics.
 - **Improved MSVC Compatibility**: Fixed ambiguous operator errors (`C2678`) in `set_stream` and `operator>>`.
 - **Optimized `unxorshift`**: Integrated an optimized version of the inverse xorshift operation for better performance.
 - **Consistent Typing**: Unified integer type handling across different platforms to avoid compiler warnings and errors.
 
 Detailed information about integrated community fixes and contributors can be found in [CREDITS.md](CREDITS.md).
+
+## Notable Users
+
+This library is used in several high-profile projects, including:
+
+- **[SLiM](https://github.com/MesserLab/SLiM)**: A genetically explicit forward simulation software package for population genetics and evolutionary biology.
 
 ## About PCG
 
@@ -52,12 +59,14 @@ uint32_t x = rng();
 While the library itself is header-only, we provide tests and samples:
 
 ### Unix-style (Linux, macOS, MinGW)
+
 ```bash
 make
 make test
 ```
 
 ### Modern CMake (All Platforms)
+
 This is the recommended way to build and integrate the library:
 
 ```bash
@@ -68,13 +77,15 @@ ctest .
 ```
 
 ### Windows (MSVC)
+
 This fork is specifically patched to support building with Visual Studio 2019/2022. You can use the CMake instructions above to generate a Visual Studio solution, or simply include the headers directly in your project.
 
 ## Directory Structure
 
-* `include/` — The core library (headers).
-* `sample/` — Readable examples showing how to use the high-level API.
-* `test-high/` — Functional and statistical tests.
+- `include/` — The core library (header-only).
+- `sample/` — Readable examples showing how to use the high-level API.
+- `test-high/` — Functional and statistical tests.
+- `cmake/` — Build system configuration and modules.
 
 ## Maintenance & Contributions
 
@@ -85,4 +96,5 @@ We welcome bug fixes and compatibility patches. If you find an issue, especially
 This code is distributed under the **Apache License, Version 2.0** or the **MIT License**, at your option. See the header of each file for details.
 
 ---
-*Maintained with ❤️ by the Total-Random Team.*
+
+_Maintained with ❤️ by the Total-Random Team._
