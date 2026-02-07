@@ -6,7 +6,7 @@ This modernized fork of `pcg-cpp` by **Total-Random** integrates several critica
 
 ### 1. Optimized `unxorshift`
 - **Origin:** [imneme/pcg-cpp PR #82](https://github.com/imneme/pcg-cpp/pull/82)
-- **Author:** [melak47](https://github.com/melak47)
+- **Author:** [LRFLEW](https://github.com/LRFLEW)
 - **Description:** Implements a more efficient inverse xorshift operation.
 
 ### 2. Empty Base Class Optimization (EBCO) for MSVC
