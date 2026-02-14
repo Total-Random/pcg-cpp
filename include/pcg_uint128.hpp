@@ -89,9 +89,9 @@ namespace pcg_extras {
 // them out.
 
 #ifndef PCG_BITCOUNT_T
-    typedef uint8_t bitcount_t;
+    using bitcount_t = uint8_t;
 #else
-    typedef PCG_BITCOUNT_T bitcount_t;
+    using bitcount_t = PCG_BITCOUNT_T;
 #endif
 
 /*
