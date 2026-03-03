@@ -26,8 +26,8 @@ Detailed information about integrated community fixes and contributors can be fo
 
 This library is used in several high-profile projects, including:
 
-- **[SLiM](https://github.com/MesserLab/SLiM)**: A genetically explicit forward simulation software package for population genetics and evolutionary biology.
-- **[correctionlib](https://github.com/cms-nanoAOD/correctionlib)**: A Python/C++ library designed for providing a unified and efficient interface for physics corrections within the CMS experiment and the broader High-Energy Physics community.
+- **[SLiM]([https://github.com/MesserLab/SLiM](https://github.com/MesserLab/SLiM/commit/cf27c10afbb31b3cce186560f12342479ef133aa))**: A genetically explicit forward simulation software package for population genetics and evolutionary biology.
+- **[correctionlib]([https://github.com/cms-nanoAOD/correctionlib](https://github.com/cms-nanoAOD/correctionlib/commit/bdeb3102299bcef6457455960076e288685babd8))**: A Python/C++ library designed for providing a unified and efficient interface for physics corrections within the CMS experiment and the broader High-Energy Physics community.
 
 ## About PCG
 
