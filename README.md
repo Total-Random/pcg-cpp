@@ -31,6 +31,7 @@ This library is used in several high-profile projects, including:
 
 - **[SLiM](https://github.com/MesserLab/SLiM/commit/cf27c10afbb31b3cce186560f12342479ef133aa)**: A genetically explicit forward simulation software package for population genetics and evolutionary biology.
 - **[correctionlib](https://github.com/cms-nanoAOD/correctionlib/commit/bdeb3102299bcef6457455960076e288685babd8)**: A Python/C++ library designed for providing a unified and efficient interface for physics corrections within the CMS experiment and the broader High-Energy Physics community.
+- **[Adobe Lagrange](https://github.com/adobe/lagrange/blob/9a9cae045414de5203e93bb33d9b78d8b8a71282/cmake/recipes/external/pcg.cmake#L21)**: An Adobe initiative to bring robust geometry processing to their products, bridging cutting-edge research with high-performance geometry processing through modular design and large-scale testing.
 
 ## About PCG
 
