@@ -113,6 +113,8 @@
 
 #if __cplusplus >= 201703L || (defined(_MSVC_LANG) && _MSVC_LANG >= 201703L)
     #define PCG_NODISCARD [[nodiscard]]
+#elif defined(__GNUC__) || defined(__clang__)
+    #define PCG_NODISCARD __attribute__((warn_unused_result))
 #else
     #define PCG_NODISCARD
 #endif
@@ -1310,7 +1312,7 @@ public:
         return baseclass::period_pow2() + table_size*extvalclass::period_pow2();
     }
 
-    PCG_ALWAYS_INLINE PCG_NODISCARD result_type operator()()
+    PCG_NODISCARD PCG_ALWAYS_INLINE result_type operator()()
     {
         result_type rhs = get_extended_value();
         result_type lhs = this->baseclass::operator()();
