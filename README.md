@@ -18,6 +18,9 @@ The original repository by Melissa O'Neill (`imneme/pcg-cpp`) has been a corners
 - **Windows ARM64 Support**: Integrated native support for MSVC on ARM64 architectures (Surface Pro, Apple Silicon via VM, etc.) using `__umulh` intrinsics.
 - **Improved MSVC Compatibility**: Fixed ambiguous operator errors (`C2678`) in `set_stream` and `operator>>`.
 - **Optimized `unxorshift`**: Integrated an optimized version of the inverse xorshift operation for better performance.
+- **Modern C++ Style**: Replaced legacy `typedef` with modern `using` declarations and added `#pragma once`.
+- **Improved Safety**: Introduced `PCG_NODISCARD` to prevent errors from ignored RNG results.
+- **Enhanced API**: Added convenience typedefs for **DXSM** (Double XorShift Multiply) generators.
 - **Consistent Typing**: Unified integer type handling across different platforms to avoid compiler warnings and errors.
 
 Detailed information about integrated community fixes and contributors can be found in [CREDITS.md](CREDITS.md).
