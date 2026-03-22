@@ -1,9 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"D:/Cpp/project/pcg-cpp/build-test/cmake_install.cmake",
-		"D:/Cpp/project/pcg-cpp/build-test/sample/cmake_install.cmake",
-		"D:/Cpp/project/pcg-cpp/build-test/test-high/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
