@@ -32,7 +32,7 @@
  * heavyweight.  So we use a direct implementation.  Sadly, it's much slower
  * than hand-coded assembly or direct CPU support.
  */
-
+#pragma once
 #ifndef PCG_UINT128_HPP_INCLUDED
 #define PCG_UINT128_HPP_INCLUDED 1
 

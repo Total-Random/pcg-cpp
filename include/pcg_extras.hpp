@@ -29,7 +29,7 @@
  *      - Support for efficiently producing random numbers less than a given
  *        bound
  */
-
+#pragma once
 #ifndef PCG_EXTRAS_HPP_INCLUDED
 #define PCG_EXTRAS_HPP_INCLUDED 1
 
@@ -525,7 +525,7 @@ inline void generate_to(SeedSeq&& generator, DestIter dest)
  */
 
 template <typename UInt, size_t i = 0UL, size_t N = i+1UL, typename SeedSeq>
-inline UInt generate_one(SeedSeq&& generator)
+PCG_NODISCARD inline UInt generate_one(SeedSeq&& generator)
 {
     UInt result[N];
     generate_to<N>(std::forward<SeedSeq>(generator), result);
@@ -533,7 +533,7 @@ inline UInt generate_one(SeedSeq&& generator)
 }
 
 template <typename RngType>
-auto bounded_rand(RngType& rng, typename RngType::result_type upper_bound)
+PCG_NODISCARD auto bounded_rand(RngType& rng, typename RngType::result_type upper_bound)
         -> typename RngType::result_type
 {
     using rtype = typename RngType::result_type;
