@@ -44,6 +44,12 @@
 #include <utility>
 #include <locale>
 #include <iterator>
+#include <limits>
+
+#if __cplusplus >= 202002L || (defined(_MSVC_LANG) && _MSVC_LANG >= 202002L) || defined(PCG_USE_BIT_HEADER)
+    #include <bit>
+    #define PCG_BIT_SUPPORT 1
+#endif
 
 #ifdef __GNUC__
     #include <cxxabi.h>
@@ -287,6 +293,11 @@ inline itype unxorshift(itype x, bitcount_t bits, bitcount_t shift)
 template <typename itype>
 inline itype rotl(itype value, bitcount_t rot)
 {
+#if PCG_BIT_SUPPORT
+    if constexpr (std::is_integral_v<itype> && std::is_unsigned_v<itype>) {
+        return std::rotl(value, (int)rot);
+    }
+#endif
     constexpr bitcount_t bits = sizeof(itype) * 8;
     constexpr bitcount_t mask = bits - 1;
 #if PCG_USE_ZEROCHECK_ROTATE_IDIOM
@@ -299,6 +310,11 @@ inline itype rotl(itype value, bitcount_t rot)
 template <typename itype>
 inline itype rotr(itype value, bitcount_t rot)
 {
+#if PCG_BIT_SUPPORT
+    if constexpr (std::is_integral_v<itype> && std::is_unsigned_v<itype>) {
+        return std::rotr(value, (int)rot);
+    }
+#endif
     constexpr bitcount_t bits = sizeof(itype) * 8;
     constexpr bitcount_t mask = bits - 1;
 #if PCG_USE_ZEROCHECK_ROTATE_IDIOM

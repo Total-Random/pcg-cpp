@@ -40,6 +40,14 @@
 #include <cstdio>
 #include <cassert>
 #include <climits>
+
+#if __cplusplus >= 202002L || (defined(_MSVC_LANG) && _MSVC_LANG >= 202002L) || defined(PCG_USE_BIT_HEADER)
+    #include <bit>
+    #ifndef PCG_BIT_SUPPORT
+        #define PCG_BIT_SUPPORT 1
+    #endif
+#endif
+#include <cassert>
 #include <utility>
 #include <initializer_list>
 #include <type_traits>
@@ -100,7 +108,29 @@ namespace pcg_extras {
  *      * trailingzeros         number of trailing zero bits
  */
 
-#if defined(__GNUC__)   // Any GNU-compatible compiler supporting C++11 has
+#if PCG_BIT_SUPPORT
+
+inline bitcount_t flog2(uint32_t v)
+{
+    return bitcount_t(std::bit_width(v) - 1);
+}
+
+inline bitcount_t trailingzeros(uint32_t v)
+{
+    return bitcount_t(std::countr_zero(v));
+}
+
+inline bitcount_t flog2(uint64_t v)
+{
+    return bitcount_t(std::bit_width(v) - 1);
+}
+
+inline bitcount_t trailingzeros(uint64_t v)
+{
+    return bitcount_t(std::countr_zero(v));
+}
+
+#elif defined(__GNUC__)   // Any GNU-compatible compiler supporting C++11 has
                         // some useful intrinsics we can use.
                         // These bitcount_t casts are from SupercriticalSynthesizers/pcg-cpp PR fix-gcc-warnings
 
