@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Solution>
+	<Configurations>
+		<BuildType Name="Debug"/>
+		<BuildType Name="Release"/>
+		<BuildType Name="MinSizeRel"/>
+		<BuildType Name="RelWithDebInfo"/>
+		<Platform Name="x64"/>
+	</Configurations>
+	<Project Path="ALL_BUILD.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="2ae360cb-a228-32d5-a175-223985790a7d" DefaultStartup="true">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<BuildDependency Project="sample/basic_usage.vcxproj"/>
+		<BuildDependency Project="sample/check-output.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg128_once_insecure.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg128_oneseq_once_insecure.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg16_once_insecure.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg16_oneseq_once_insecure.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_c1024.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_c1024_fast.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_c64.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_c64_fast.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_c64_oneseq.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_fast.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_k1024.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_k1024_fast.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_k16384.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_k16384_fast.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_k2.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_k2_fast.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_k64.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_k64_fast.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_k64_oneseq.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_once_insecure.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_oneseq.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_oneseq_once_insecure.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg32_unique.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64_c1024.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64_c1024_fast.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64_c32.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64_c32_fast.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64_c32_oneseq.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64_fast.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64_k1024.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64_k1024_fast.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64_k32.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64_k32_fast.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64_k32_oneseq.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64_once_insecure.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64_oneseq.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64_oneseq_once_insecure.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg64_unique.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg8_once_insecure.vcxproj"/>
+		<BuildDependency Project="test-high/check-pcg8_oneseq_once_insecure.vcxproj"/>
+		<BuildDependency Project="sample/codebook.vcxproj"/>
+		<BuildDependency Project="sample/cppref-sample.vcxproj"/>
+		<BuildDependency Project="sample/make-partytrick.vcxproj"/>
+		<BuildDependency Project="sample/pcg-demo.vcxproj"/>
+	</Project>
+	<Project Path="INSTALL.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="e1941257-1e4f-37e2-831b-1bdbc1a04e99">
+		<BuildDependency Project="ALL_BUILD.vcxproj"/>
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<Build Solution="Debug|*" Project="false"/>
+		<Build Solution="Release|*" Project="false"/>
+		<Build Solution="MinSizeRel|*" Project="false"/>
+		<Build Solution="RelWithDebInfo|*" Project="false"/>
+	</Project>
+	<Project Path="RUN_TESTS.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="a7a128fd-9dbf-3533-9d14-fe9a8d13df73">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+		<Build Solution="Debug|*" Project="false"/>
+		<Build Solution="Release|*" Project="false"/>
+		<Build Solution="MinSizeRel|*" Project="false"/>
+		<Build Solution="RelWithDebInfo|*" Project="false"/>
+	</Project>
+	<Project Path="ZERO_CHECK.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="1191e5e7-ec4c-3888-911f-66bb786288fb"/>
+	<Project Path="sample/basic_usage.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="2dd7294f-f760-32c1-9cef-5cfd0ba46436">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="sample/check-output.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="3ba8bbc4-275c-383b-a4fd-b73d82b7236c">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg128_once_insecure.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="b7665fbe-16ce-344a-bbf2-767151f846d3">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg128_oneseq_once_insecure.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="8be27cae-8c06-35e5-80af-7c6700675130">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg16_once_insecure.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="8666b239-2ed8-39ee-bba3-21381809f530">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg16_oneseq_once_insecure.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="83f99fa9-1f6c-3047-a23a-3f691629b226">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="e55c79bf-81b9-3c5b-824d-a30f30285bf3">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_c1024.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="ff7a7a19-7c64-37fc-864a-fde0b16738e4">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_c1024_fast.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="030ce353-56e5-3d53-96bf-27cce6611740">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_c64.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="56055f77-9d93-329e-893e-f758ee9fb419">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_c64_fast.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="2002b505-cc35-35ff-ac37-0e293610d22b">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_c64_oneseq.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="91dcd5e9-809e-3393-b49b-a36951c8bb0f">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_fast.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="75b75172-5700-3f3f-abcf-0fe97812d84d">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_k1024.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="e182f911-b9aa-341d-8ba8-cd5113331d98">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_k1024_fast.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="3802f384-0a38-340c-bdc4-f580784aef44">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_k16384.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="c791d854-ce90-3d54-83da-d45d7812d17d">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_k16384_fast.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="5683cf3f-b1f2-36f7-9e26-2addac61c5f9">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_k2.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="ff45b68c-fb21-35e0-ba68-cdc912aa2aa9">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_k2_fast.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="496e6b01-bf16-3059-b50e-6d8815fdd89b">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_k64.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="a88ff5b2-71f1-37e6-a989-66cb5f517b38">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_k64_fast.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="9125348d-f6ce-3294-9ec7-054fa2f2789c">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_k64_oneseq.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="954913ab-cc68-3a09-9a4a-c94ef853520a">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_once_insecure.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="6c27fc3e-ad92-3f9d-80ce-a817d4027c07">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_oneseq.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="ef611074-5455-3ac1-9d6e-690193fe309d">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_oneseq_once_insecure.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="d77c7ff2-2987-39eb-a353-06336a0dd378">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg32_unique.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="9e898284-4c2c-3091-b25e-0b7fd7a3c212">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="4e98dba4-1728-3c7e-9673-127b59b4b0b6">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64_c1024.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="78b3b6d2-2f24-312e-85d7-998b9d854367">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64_c1024_fast.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="e16d2852-e2bd-3810-9205-46a4b60c2827">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64_c32.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="63fc0549-a84e-3a47-b189-8a9c8e6ab4b4">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64_c32_fast.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="a3534995-80ed-3da9-a472-6d08c487e76d">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64_c32_oneseq.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="a8ef24f6-a698-3bb0-9b6f-33a8cccd396e">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64_fast.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="6b748d76-da6c-3daf-bd62-e2442836bc7b">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64_k1024.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="8645b6ee-930a-3541-84b3-0d86a9a3b21b">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64_k1024_fast.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="ab26254f-1fb3-3b6d-aed1-d2228bb711b2">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64_k32.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="b8d5ce6b-00c3-3c65-a27e-d87c52c07c24">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64_k32_fast.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="193b8fe4-9b64-3d75-b08c-0722b3fa4903">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64_k32_oneseq.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="4fb5811d-a1a4-308d-8b37-ca86ba4e5837">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64_once_insecure.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="edcc77fe-49a1-3027-8543-6c5148458506">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64_oneseq.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="49092a1e-e19a-337a-809c-5ef6fdd9976f">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64_oneseq_once_insecure.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="c6f46efe-127d-3c1e-93f4-c9da351bfda1">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg64_unique.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="48069771-3370-3278-a167-fb0b174a779d">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg8_once_insecure.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="264dc1a8-7f55-340b-b9ca-ed32a2fb4feb">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="test-high/check-pcg8_oneseq_once_insecure.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="f306f269-98d5-3937-b541-604d444195f3">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="sample/codebook.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="b00d4d19-36b5-33bf-9105-79073db49706">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="sample/cppref-sample.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="7346d937-58c8-3812-a6ad-0e77264f1058">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="sample/make-partytrick.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="1cd628a0-c41a-3e27-9c1a-ab78a8c18ce8">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+	<Project Path="sample/pcg-demo.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="6473f48d-b275-3ea6-8e59-4deaebac994b">
+		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
+	</Project>
+</Solution>

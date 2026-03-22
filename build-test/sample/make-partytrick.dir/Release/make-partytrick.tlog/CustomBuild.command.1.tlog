@@ -1,0 +1,10 @@
+^D:\CPP\PROJECT\PCG-CPP\SAMPLE\CMAKELISTS.TXT
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/Cpp/project/pcg-cpp -BD:/Cpp/project/pcg-cpp/build-test --check-stamp-file D:/Cpp/project/pcg-cpp/build-test/sample/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
