@@ -33,7 +33,7 @@ jobs:
             compiler: apple-clang
 
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
 
 
 
@@ -75,7 +75,7 @@ jobs:
     permissions:
       contents: read
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     
     - name: Test on FreeBSD
       uses: vmactions/freebsd-vm@v1
@@ -98,7 +98,7 @@ jobs:
     permissions:
       contents: read
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v4
@@ -128,7 +128,7 @@ jobs:
     permissions:
       contents: read
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
     
     - name: Configure CMake for ARM64
       run: >
